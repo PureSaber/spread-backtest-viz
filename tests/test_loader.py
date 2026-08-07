@@ -11,7 +11,11 @@ OUTPUT_ROOT = Path(r"d:/temp_framework/ver2/future_spread_analysis-team-framewor
 RUN_ID = "baseline_dev"
 
 
-@pytest.mark.skipif(not run_dir(OUTPUT_ROOT, RUN_ID).is_dir(), reason="无 baseline_dev 产出")
+def _has_baseline_run() -> bool:
+    return (OUTPUT_ROOT / RUN_ID).is_dir()
+
+
+@pytest.mark.skipif(not _has_baseline_run(), reason="无 baseline_dev 产出")
 def test_load_portfolio_columns():
     port = load_portfolio(run_dir(OUTPUT_ROOT, RUN_ID))
     assert not port.empty
@@ -19,7 +23,7 @@ def test_load_portfolio_columns():
     assert "daily_pnl_pct" in port.columns
 
 
-@pytest.mark.skipif(not run_dir(OUTPUT_ROOT, RUN_ID).is_dir(), reason="无 baseline_dev 产出")
+@pytest.mark.skipif(not _has_baseline_run(), reason="无 baseline_dev 产出")
 def test_load_run_bundle():
     data = load_run(OUTPUT_ROOT, RUN_ID)
     assert data["run_id"] == RUN_ID

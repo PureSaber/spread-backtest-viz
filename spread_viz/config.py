@@ -36,4 +36,4 @@ class VizConfig:
             }
 
 
-__all__ = ["TRADING_DAYS", "ANNUAL_DAYS", "PLOT_GROUPS", "VizConfig"]
+__all__ = ["ANNUAL_DAYS", "PLOT_GROUPS", "TRADING_DAYS", "VizConfig"]

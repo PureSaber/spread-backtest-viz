@@ -64,4 +64,4 @@ class CompareContext:
     out_dir: Path
 
 
-__all__ = ["PlotContext", "CompareContext"]
+__all__ = ["CompareContext", "PlotContext"]
