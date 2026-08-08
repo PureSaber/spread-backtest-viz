@@ -1,6 +1,6 @@
-"""spread-backtest-viz — 期货价差回测产出可视化。"""
+"""spread-backtest-viz — deprecated shim; use quant-report-hub."""
 from __future__ import annotations
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 __all__ = ["__version__"]

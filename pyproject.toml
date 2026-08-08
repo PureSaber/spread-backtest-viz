@@ -4,25 +4,16 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "spread-backtest-viz"
-version = "0.1.0"
-description = "Visualization toolkit for futures spread backtest outputs"
+version = "0.2.0"
+description = "Deprecated compatibility shim for futures spread viz (use quant-report-hub)"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "pandas>=2.0",
-    "numpy>=1.24",
-    "matplotlib>=3.7",
-    "seaborn>=0.13",
-    "PyYAML>=6.0",
-    "openpyxl>=3.1",
+    "quant-report-hub>=0.2.0",
 ]
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0", "ruff>=0.9.0"]
-
-[tool.ruff]
-line-length = 100
-target-version = "py310"
 
 [project.scripts]
 spread-viz = "spread_viz.cli:main"
@@ -34,3 +25,7 @@ include = ["spread_viz*"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
