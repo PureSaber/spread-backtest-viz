@@ -1,4 +1,5 @@
 """Shim tests — implementation lives in quant-report-hub."""
+
 from __future__ import annotations
 
 import warnings

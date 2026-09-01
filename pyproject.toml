@@ -9,7 +9,7 @@ description = "Deprecated compatibility shim for futures spread viz (use quant-r
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "quant-report-hub>=0.2.0",
+    "quant-report-hub @ git+https://github.com/PureSaber/quant-report-hub.git@b334b34a61f6e563916add32af94d70dc7ed7494",
 ]
 
 [project.optional-dependencies]
