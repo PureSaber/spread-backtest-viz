@@ -1,4 +1,5 @@
 """Compatibility CLI — delegates to quant-report-hub (spread adapter)."""
+
 from __future__ import annotations
 
 import argparse
@@ -76,7 +77,9 @@ def _cmd_compare(args: argparse.Namespace) -> int:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    p = argparse.ArgumentParser(prog="spread-viz", description="期货价差回测可视化（已弃用，请用 quant-report-hub）")
+    p = argparse.ArgumentParser(
+        prog="spread-viz", description="期货价差回测可视化（已弃用，请用 quant-report-hub）"
+    )
     sub = p.add_subparsers(dest="command", required=True)
 
     run = sub.add_parser("run", help="单 run 生成图表")
